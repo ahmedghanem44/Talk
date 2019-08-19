@@ -1,0 +1,6 @@
+com\nemo\talk\services\TalkService.class
+com\nemo\talk\services\TalkServiceInterface.class
+com\nemo\talk\controllers\TalkController.class
+com\nemo\talk\daos\TalkDao.class
+com\nemo\talk\entities\Talk.class
+com\nemo\talk\daos\TalkDaoInterface.class

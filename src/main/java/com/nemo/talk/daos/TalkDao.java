@@ -4,9 +4,11 @@ import java.util.List;
 
 import javax.transaction.Transaction;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,9 +73,14 @@ public class TalkDao implements TalkDaoInterface{
 //		Query query = sess.createQuery("from Talk");
 //		List<Talk> talks = query.list();
 		List<Talk> list = sess.createCriteria(Talk.class).list();
+//		Criteria cr = sess.createCriteria(Talk.class);
+//		List<Talk> list2 = cr.list();
+//		cr.add(Restrictions.eq(propertyName, value));
 		sess.close();
 		return list;
 	}
+	
+	
 	
 
 }

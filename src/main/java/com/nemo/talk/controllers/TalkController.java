@@ -2,6 +2,8 @@ package com.nemo.talk.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
@@ -27,7 +29,8 @@ public class TalkController {
 	
 	@RequestMapping(value="/list",method=RequestMethod.GET)
 //	@GetMapping("/list")
-	public @ResponseBody List<Talk> getTalks(){
+	public @ResponseBody List<Talk> getTalks(HttpServletResponse response){
+		response.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
 		return talkService.findTalks();	
 	}
 	

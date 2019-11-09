@@ -1,0 +1,4 @@
+com.nemo.talk.controllers
+com.nemo.talk.daos
+com.nemo.talk.entities
+com.nemo.talk.services

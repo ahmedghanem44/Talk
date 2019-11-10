@@ -38,7 +38,7 @@ public class TalkDao implements TalkDaoInterface{
 		Talk t = (Talk) sess.load(Talk.class,talk.getId());
 		t.setName(talk.getName());
 		t.setSpeaker(talk.getSpeaker());
-		t.setVenue(talk.getSpeaker());
+		t.setVenue(talk.getVenue());
 		t.setMinutes(talk.getMinutes());
 		sess.update(t);
 		tx.commit();
